@@ -1,0 +1,135 @@
+html{
+    background-image: linear-gradient(to top right, blue 0%, cyan 75%);
+    font-family: "Times New Roman", monospace;
+}
+
+p,ul>li{
+    font-size: 115%;
+    text-align: justify;
+}
+
+ul{
+    list-style: square;
+}
+
+nav{
+    background: rgba(0,0,128,0.4);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+
+nav>a{
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+}
+
+nav>a:hover,ul>li:hover,p:hover{
+    color: black;
+    background: rgba(0,0,128,0.3);
+}
+
+footer{
+    padding: 3% 0 3% 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,128, 0.5);
+}
+
+img{
+    background-color: darkcyan;
+    border: 4px solid blue;
+    border-radius: 25px;
+}
+
+#sto1, #sto2{
+    display: inline-block;
+    width: 55%;
+    vertical-align: top;
+}
+
+img{
+    display: inline-block;
+    width: 40%;
+    height: auto;
+}
+
+#img4,#img5{
+    max-width: 350px;
+}
+
+#img1,#img2,#img3{
+    max-width: 600px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 855px){
+    nav>a{
+        width: 32%;
+    }
+
+    img{
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    p,ul{
+        width: 50%;
+        font-size: 125%;
+        display: inline-block;
+        float: left;
+    }
+
+    #sto1,#sto2{
+        font-size: 125%;
+        display: inline-block;
+        float: left;
+
+    }
+    #img4,#img5{
+        width: 70%;
+        height: auto;
+        margin: 2%;
+        display: inline-block;
+        float:right;
+    }
+
+    #img3{
+        margin: 2%;
+        display: inline-block;
+        float:right;
+    }
+
+    #img1,#img2{
+        display: inline-block;
+        float:right;
+        position: relative;
+        top: -400px;
+        margin-bottom: 5%;
+    }
+
+    footer,h2{
+        margin-top: 2% ;
+        display: inline-block;
+        float: none;
+    }
+
+    h3{
+        font-size: 130%;
+    }
+
+    #storia{
+        margin-right: 20%;
+        margin-top: 10%;
+    }
+
+    #intro,#better{
+        width: 60%;
+        display: inline-block;
+        float: left;
+    }
+}

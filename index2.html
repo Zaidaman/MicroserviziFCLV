@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Approfondimenti</title>
+        <link rel="stylesheet" href="style.css"/>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./index2.html">Approfondimenti</a>
+            <a href="index3.html">JSON</a>
+        </nav>
+    </head>
+    <body>
+        <h1>Approfondimento sui Microservizi</h1>
+            <h2 id="intro">Architettura monolitica VS architettura di microservizi</h2>
+                <p>L' architettura monolitica raccoglie in un unico servizio tutte le funzionalita', esse sono collegate fra loro ed eseguite come un unico servizio, questo porta varie problematiche:</p>
+                <ul>
+                    <li>Se si verifica un picco su una funzione del nostro sito, dovremo ridimensionare l' intera architettura per supportare questi carichi di lavoro</li>
+                    <li>Aggiungere, modificare o eliminare una funzione e' incredibilmente complesso e laborioso, portando anche ad eventuali errori durante la fase di programmazione</li>
+                    <li>La presenza di molte funzioni su un sito ognuna dipendente dell'altra puo' provocare in caso di errore un effetto a "Domino", propagando il disagio su tutto il sito</li>
+                </ul>
+                <p>L' architettura di microservizi permette di raccogliere piu' servizi indipendenti, ognuno con un' unica funzione, capaci di comunicare fra loro tramite API, questa architettura ha vari vantaggi. tra cui:</p>
+                <ul>
+                    <li>Autonomia, ogni servizio viene eseguito senza influenzare il codice sorgente, proprio o altrui, la comunicazione avviene solo tramite API ben definite</li>
+                    <li>Specializzati, questa architettura permette al programmatore, in caso ampliasse il codice, di scomporre un servizio in servizi piu' piccoli</li>
+                    <li>Agilita', permette una gestione piu' veloce e semplice dei propri servizi, inoltre permette una grande scalabilita'</li>
+                    <li>Resilienza, la gestione degli errori non e' piu' centralizzata sul sito web rischiando un effetto "domino", ma in caso di errori sui servizi questo non andra' ad intaccare il resto del sito web</li>
+                </ul>
+                <img id="img1" src="img/1.png">
+            <h2 id="better">Quando i microservizi non sono la scelta migliore</h2>
+                <p>Anche se l' architettura a microservizi man mano sta diventando il nuovo standard, non sempre rimane la scelta migliore, certe volte una soluzione monolitica rimane la piu' conveniente per un' azienda o un' organizzazione.<br/>Questo si puo' applicare nei seguenti casi:</p>
+                <ul>
+                    <li>Non si dispone di tempo e budget per creare un Mock-up</li>
+                    <li>Necessita' di un' applicazione semplice che non richiede particolare scalabilita' e flessibilita'</li>
+                    <li>Inesperienza del programmatore</li>
+                </ul>
+                <img id="img2" src="img/2.png">
+
+    <footer>
+        <h3>Progetto ideato da: Cappella Filippo, Luca Vignali<br>
+            Fonti: Amazon AWS, Sparkfabrik, Wikipedia</h3>
+    </footer>
+    </body>
+</html>
