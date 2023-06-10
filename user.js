@@ -1,4 +1,3 @@
-// Creazione dell'istanza Vue
 var app = new Vue({
     el: "#app",
     data: {
@@ -7,16 +6,7 @@ var app = new Vue({
         editingUser: null
     },
     mounted() {
-        // Recupera i dati dal file JSON utilizzando l'API Fetch
-        fetch('user.json')
-            .then(response => response.json())
-            .then(data => {
-                // Assegna i dati recuperati all'array "users"
-                this.users = data;
-            })
-            .catch(error => {
-                console.error('Errore durante il recupero dei dati:', error);
-            });
+        this.loadUsersFromStorage(); // Carica gli utenti dal Web Storage al caricamento della pagina
     },
     methods: {
         addUser() {
@@ -28,6 +18,7 @@ var app = new Vue({
             this.users.push(this.newUser);
             // Reimposta i campi del nuovo utente
             this.newUser = { id: null, nome: "", cognome: "" };
+            this.saveUsersToStorage(); // Salva gli utenti nel Web Storage
         },
         editUser(user) {
             // Crea una copia dell'utente originale
@@ -39,6 +30,7 @@ var app = new Vue({
             // Salva le modifiche all'utente
             this.editingUser = null;
             this.originalUser = null;
+            this.saveUsersToStorage(); // Salva gli utenti nel Web Storage
         },
         cancelEdit() {
             // Annulla la modifica all'utente ripristinando la copia originale
@@ -46,11 +38,24 @@ var app = new Vue({
             this.users.splice(index, 1, this.originalUser);
             this.editingUser = null;
             this.originalUser = null;
+            this.saveUsersToStorage(); // Salva gli utenti nel Web Storage
         },
         deleteUser(user) {
             // Rimuovi l'utente dalla lista
             var index = this.users.indexOf(user);
             this.users.splice(index, 1);
+            this.saveUsersToStorage(); // Salva gli utenti nel Web Storage
+        },
+        saveUsersToStorage() {
+            // Salva gli utenti nel Web Storage come stringa JSON
+            localStorage.setItem('users', JSON.stringify(this.users));
+        },
+        loadUsersFromStorage() {
+            // Carica gli utenti dal Web Storage
+            var users = localStorage.getItem('users');
+            if (users) {
+                this.users = JSON.parse(users);
+            }
         }
     }
 });
