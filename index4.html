@@ -26,8 +26,8 @@
                 <button type="submit">Aggiungi</button>
             </form>
 
-            <h2>Lista Utenti:</h2>
             <ul>
+                <h2>Lista Utenti:</h2>
                 <li v-for="user in users">
                     {{ user.nome }} {{ user.cognome }}
                     <button @click="editUser(user)">Modifica</button>
