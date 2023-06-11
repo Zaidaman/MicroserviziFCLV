@@ -29,6 +29,7 @@ nav>a{
     text-align: center;
     color: white;
     padding: 5px 0;
+    text-decoration: none;
 }
 
 nav>a:hover,ul>li:hover,p:hover{
@@ -100,6 +101,27 @@ tr:nth-child(odd){
 
 tr:nth-child(even){
     background: rgba(0,90,128,0.2);
+}
+
+div,form{
+    margin: 5%;
+    background: rgba(0,0,128,0.2);
+    padding: 3%;
+    text-align: center;
+}
+
+input{
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button{
+    border-radius: 5px;
+    background: lightseagreen;
+}
+
+button:hover{
+    background: deepskyblue;
 }
 
 @media screen and (min-width: 480px) and (max-width: 855px){
