@@ -2,7 +2,7 @@ var app = new Vue({
     el: "#app",
     data: {
         users: [],
-        newUser: { id: null, nome: "", cognome: "" },
+        newUser: { nome: "", cognome: "" },
         editingUser: null
     },
     mounted() {
@@ -10,14 +10,10 @@ var app = new Vue({
     },
     methods: {
         addUser() {
-            // Genera un nuovo ID
-            var newId = this.users.length + 1;
-            // Assegna l'ID al nuovo utente
-            this.newUser.id = newId;
             // Aggiungi il nuovo utente alla lista
             this.users.push(this.newUser);
             // Reimposta i campi del nuovo utente
-            this.newUser = { id: null, nome: "", cognome: "" };
+            this.newUser = { nome: "", cognome: "" };
             this.saveUsersToStorage(); // Salva gli utenti nel Web Storage
         },
         editUser(user) {
@@ -55,6 +51,18 @@ var app = new Vue({
             var users = localStorage.getItem('users');
             if (users) {
                 this.users = JSON.parse(users);
+            }
+            else{
+                var defaultUsers = [
+                    { nome: "Mario", cognome: "Rossi" },
+                    { nome: "Luigi", cognome: "Verdi" },
+                ];
+
+                // Salva il JSON predefinito nel localStorage
+                localStorage.setItem('users', JSON.stringify(defaultUsers));
+
+                // Assegna il JSON predefinito alla variabile users
+                this.users = defaultUsers;
             }
         }
     }
