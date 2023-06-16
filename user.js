@@ -54,8 +54,8 @@ var app = new Vue({
             }
             else{
                 var defaultUsers = [
-                    { nome: "Mario", cognome: "Rossi" },
-                    { nome: "Luigi", cognome: "Verdi" },
+                    { nome: "Luca", cognome: "Vignali" },
+                    { nome: "Filippo", cognome: "Cappella" },
                 ];
 
                 // Salva il JSON predefinito nel localStorage
