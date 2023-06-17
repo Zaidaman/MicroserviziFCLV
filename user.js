@@ -45,24 +45,34 @@ var app = new Vue({
         saveUsersToStorage() {
             // Salva gli utenti nel Web Storage come stringa JSON
             localStorage.setItem('users', JSON.stringify(this.users));
+
+            axios
+                .post("users.json", this.users)
+                .then(response => {
+                    console.log("Utenti salvati con successo nel file JSON", response);
+                })
+                .catch(error => {
+                    console.error("Errore durante il salvataggio degli utenti nel file JSON", error);
+                });
         },
         loadUsersFromStorage() {
             // Carica gli utenti dal Web Storage
-            var users = localStorage.getItem('users');
+            var users = localStorage.getItem("users");
             if (users) {
                 this.users = JSON.parse(users);
-            }
-            else{
-                var defaultUsers = [
-                    { nome: "Luca", cognome: "Vignali" },
-                    { nome: "Filippo", cognome: "Cappella" }
-                ];
+            } else {
+                // Se il localStorage è vuoto, carica gli utenti da un file JSON locale
+                axios
+                    .get("users.json") // users.json è il nome del file JSON locale
+                    .then(response => {
+                        this.users = response.data;
 
-                // Salva il JSON predefinito nel localStorage
-                localStorage.setItem('users', JSON.stringify(defaultUsers));
-
-                // Assegna il JSON predefinito alla variabile users
-                this.users = defaultUsers;
+                        // Salva gli utenti nel localStorage
+                        localStorage.setItem("users", JSON.stringify(this.users));
+                    })
+                    .catch(error => {
+                        console.error("Errore durante il caricamento degli utenti dal file JSON", error);
+                    });
             }
         }
     }
