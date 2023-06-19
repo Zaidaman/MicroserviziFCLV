@@ -47,7 +47,7 @@ var app = new Vue({
             localStorage.setItem('users', JSON.stringify(this.users));
 
             axios
-                .post(src="https://github.com/Zaidaman/MicroserviziFCLV/blob/master/users.json", this.users)
+                .post("https://github.com/Zaidaman/MicroserviziFCLV/blob/master/users.json", this.users)
                 .then(response => {
                     console.log("Utenti salvati con successo nel file JSON", response);
                 })
@@ -63,7 +63,7 @@ var app = new Vue({
             } else {
                 // Se il localStorage è vuoto, carica gli utenti da un file JSON locale
                 axios
-                    .get(src="https://github.com/Zaidaman/MicroserviziFCLV/blob/master/users.json") // users.json è il nome del file JSON locale
+                    .get("https://github.com/Zaidaman/MicroserviziFCLV/blob/master/users.json") // users.json è il nome del file JSON locale
                     .then(response => {
                         this.users = response.data;
 
