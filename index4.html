@@ -25,6 +25,7 @@
                 <input type="text" id="cognome" v-model="newUser.cognome" required>
                 <br>
                 <button type="submit">Aggiungi</button>
+                <button @click="downloadJSON">Scarica JSON</button>
             </form>
 
             <form v-if="editingUser" @submit.prevent="saveUser" id="modUser">

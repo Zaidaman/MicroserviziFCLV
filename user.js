@@ -74,6 +74,17 @@ var app = new Vue({
                         console.error("Errore durante il caricamento degli utenti dal file JSON", error);
                     });
             }
+        },
+
+        downloadJSON() {
+            const json = localStorage.getItem('users');
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'users.json';
+            link.click();
+            URL.revokeObjectURL(url);
         }
     }
 });
