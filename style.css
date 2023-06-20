@@ -4,10 +4,14 @@ html{
     font-family: "Times New Roman", monospace;
 }
 
-p,ul>li{
+p,ul>li,ol>li{
     font-size: 115%;
     text-align: justify;
     list-style: square;
+}
+
+ol>li{
+    list-style: decimal;
 }
 
 #banner{
@@ -32,7 +36,7 @@ nav>a{
     text-decoration: none;
 }
 
-nav>a:hover,ul>li:hover,p:hover{
+nav>a:hover,ul>li:hover,ol>li:hover,p:hover{
     color: black;
     background: rgba(0,0,128,0.3);
 }
@@ -137,7 +141,7 @@ button:hover{
 }
 
 @media screen and (min-width: 1000px) {
-    p,ul{
+    p,ul,ol{
         width: 50%;
         font-size: 125%;
         display: inline-block;
@@ -188,7 +192,7 @@ button:hover{
         margin-top: 10%;
     }
 
-    #intro,#better{
+    #intro,#better,#quest{
         width: 60%;
         display: inline-block;
         float: left;

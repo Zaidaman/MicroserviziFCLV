@@ -29,6 +29,20 @@
                     <li>Resilienza, la gestione degli errori non e' piu' centralizzata sul sito web rischiando un effetto "domino", ma in caso di errori sui servizi questo non andra' ad intaccare il resto del sito web</li>
                 </ul>
                 <img id="img1" alt="Differenze fra architettura monolitica e micro-service" src="img/1.png">
+            <h2 id="quest">Come si utilizzano i Microservizi?</h2>
+                <p>Per utilizzare i microservizi in modo efficace, è necessario seguire alcuni passaggi fondamentali:</p>
+                <ol>
+                    <li>Analisi dell'applicazione: Valuta l'applicazione e individua le diverse funzionalità o domini di business che possono essere suddivisi in microservizi. Ogni microservizio dovrebbe rappresentare una specifica funzionalità dell'applicazione.</li>
+                    <li>Definizione delle interfacce: Stabilisci le interfacce (API) che i microservizi utilizzeranno per comunicare tra loro. È importante definire contratti di interfaccia che consentano l'interazione senza dipendere dagli aspetti interni dei singoli servizi.</li>
+                    <li>Suddivisione dell'applicazione: Suddividi l'applicazione in microservizi basati sulle funzionalità identificate in precedenza. Assicurati che ogni microservizio sia autonomo e indipendente, gestendo i propri dati e operazioni di business.</li>
+                    <li>Implementazione dei microservizi: Implementa ciascun microservizio come un'entità separata, utilizzando il linguaggio di programmazione e le tecnologie più adatte alle sue esigenze specifiche. Ogni microservizio dovrebbe avere il proprio ambiente di runtime e il proprio database o meccanismo di persistenza dei dati.</li>
+                    <li>Gestione delle comunicazioni: Implementa meccanismi di comunicazione tra i microservizi utilizzando protocolli e tecnologie come REST, messaggistica asincrona o architettura event-driven. Assicurati di considerare la resilienza delle comunicazioni e la gestione degli errori.</li>
+                    <li>Orchestrazione e coordinamento: Gestisci l'orchestrazione e il coordinamento dei microservizi per completare operazioni di business più complesse. Puoi utilizzare strumenti di gestione dei processi aziendali (BPM) o tecnologie di orchestrazione come Kubernetes per gestire i microservizi in un ambiente di produzione.</li>
+                    <li>Deployment e scalabilità: Implementa un sistema di deployment automatizzato per distribuire e gestire i microservizi. Sfrutta le capacità di scalabilità orizzontale per gestire efficacemente il carico di lavoro.</li>
+                    <li>Monitoraggio e gestione: Implementa strumenti di monitoraggio e gestione per raccogliere dati sulle prestazioni dei microservizi, il loro stato e la scalabilità. Monitora le metriche chiave, le performance e l'integrità dei microservizi per garantire un funzionamento ottimale del sistema.</li>
+                    <li>Evoluzione e aggiornamenti: Prendi in considerazione la gestione delle modifiche e degli aggiornamenti dei microservizi. Puoi adottare tecniche come il versionamento delle API e l'approccio "rolling update" per consentire un'evoluzione graduale e senza interruzioni del sistema.</li>
+                </ol>
+                <p>È fondamentale comprendere i principi e le pratiche architetturali dei microservizi per utilizzarli al meglio. Prima di adottarli, valuta attentamente i benefici e i costi coinvolti, in modo da assicurarti che siano adatti alle specifiche esigenze del tuo progetto o organizzazione.</p>
             <h2 id="better">Quando i microservizi non sono la scelta migliore</h2>
                 <p>Anche se l' architettura a microservizi man mano sta diventando il nuovo standard, non sempre rimane la scelta migliore, certe volte una soluzione monolitica rimane la piu' conveniente per un' azienda o un' organizzazione.<br/>Questo si puo' applicare nei seguenti casi:</p>
                 <ul>
