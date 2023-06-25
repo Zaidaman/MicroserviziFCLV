@@ -37,7 +37,7 @@ nav>a{
 }
 
 nav>a:hover,ul>li:hover,ol>li:hover,p:hover{
-    color: black;
+    color: white;
     background: rgba(0,0,128,0.3);
 }
 
@@ -89,7 +89,7 @@ td,th{
     padding-bottom: 0.5%;
 }
 
-tbody>tr:hover{
+tbody>tr:hover,button:hover{
     background: cadetblue;
 }
 
@@ -125,19 +125,26 @@ button{
     background: lightseagreen;
 }
 
-td>button
-{
+td>button {
     padding: 0.4%;
-}
-
-button:hover{
-    background: deepskyblue;
 }
 
 #downJSON{
     padding: 1% 3% 1% 3%;
     font-size: 100%;
+}
 
+input[type=text]{
+    width: 50%;
+    padding: 1% 1%;
+    margin: 0 25% 1% 25%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+label{
+    color: lightgrey;
+    margin: 1%;
 }
 
 @media screen and (min-width: 480px) and (max-width: 855px){
