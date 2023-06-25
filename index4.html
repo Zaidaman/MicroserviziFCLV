@@ -27,7 +27,7 @@
                 <button type="submit">Aggiungi</button>
             </form>
 
-            <button @click="downloadJSON">Scarica JSON</button>
+
             <form v-if="editingUser" @submit.prevent="saveUser" id="modUser">
                 <h2>Modifica Utente:</h2><br>
                 <label for="nome">Nome:</label>
@@ -39,6 +39,7 @@
                 <button type="submit">Salva</button>
                 <button @click="cancelEdit">Annulla</button>
             </form>
+            <button @click="downloadJSON" id="downJSON">Download JSON</button>
 
             <table id="tableUser">
                 <thead>
