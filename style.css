@@ -37,8 +37,8 @@ nav>a{
 }
 
 nav>a:hover,ul>li:hover,ol>li:hover,p:hover{
-    color: black;
-    background: rgba(0,0,128,0.3);
+    color: white;
+    background: rgba(0,0,128,0.5);
 }
 
 footer{
@@ -89,7 +89,7 @@ td,th{
     padding-bottom: 0.5%;
 }
 
-tbody>tr:hover{
+tbody>tr:hover,button:hover{
     background: cadetblue;
 }
 
@@ -122,10 +122,6 @@ input{
 button{
     border-radius: 5px;
     background: lightseagreen;
-}
-
-button:hover{
-    background: deepskyblue;
 }
 
 @media screen and (min-width: 480px) and (max-width: 855px){
